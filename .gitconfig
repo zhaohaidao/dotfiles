@@ -1,0 +1,24 @@
+[filter "hawser"]
+        clean = git hawser clean %f
+        smudge = git hawser smudge %f
+        required = true
+[user]
+        name = zhaohaiyuan
+        email = zhaohaiyuan@baidu.com
+[filter "lfs"]
+        clean = git lfs clean %f
+        smudge = git lfs smudge %f
+        required = true
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        plog = log --graph --full-history --all --pretty=format:\"%Cred%h%x09%C(cyan)%d%x20%Creset%s%Cblue<%C(yellow)%aN%Cblue>\"
+        st = status
+        co = checkout
+        c-p = cherry-pick
+        pull = pull --rebase
+[push]
+        default = matching
+[core]
+        editor=vim
+[merge]
+        tool=vimdiff3
